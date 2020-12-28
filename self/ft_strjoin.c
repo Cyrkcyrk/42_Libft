@@ -6,23 +6,12 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/12 15:52:31 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/08/15 11:41:10 by ckasyc           ###   ########.fr       */
+/*   Updated: 2020/12/28 21:10:20 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-
-int		ft_strlen(char *str)
-{
-	int i;
-
-	i = 0;
-	if (str == NULL || !str)
-		return (0);
-	while (str[i])
-		i++;
-	return (i);
-}
+#include "../includes/libft.h"
 
 char	*ft_fill_str(int size, char **strs, char *sep, int len)
 {

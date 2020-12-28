@@ -6,11 +6,11 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/11 21:32:47 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 15:03:07 by ckasyc           ###   ########.fr       */
+/*   Updated: 2020/12/28 15:50:08 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ftlib.h>
+#include "libft.h"
 
 char	*ft_strdup(char *str)
 {

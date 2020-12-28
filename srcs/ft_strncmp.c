@@ -6,11 +6,11 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/06 21:05:32 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 15:03:47 by ckasyc           ###   ########.fr       */
+/*   Updated: 2020/12/28 15:50:44 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftlib.h"
+#include "libft.h"
 
 int		ft_strncmp(char *s1, char *s2, unsigned int n)
 {

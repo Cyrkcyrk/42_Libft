@@ -6,22 +6,11 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/06 21:10:31 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/08/08 17:35:18 by ckasyc           ###   ########.fr       */
+/*   Updated: 2020/12/28 21:11:25 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *str)
-{
-	int count;
-
-	count = 0;
-	while (str && *str != '\0')
-	{
-		count++;
-		str++;
-	}
-	return (count);
-}
+#include "../includes/libft.h"
 
 char	*ft_strcat(char *dest, char *src)
 {

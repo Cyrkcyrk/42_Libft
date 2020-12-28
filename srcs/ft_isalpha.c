@@ -6,11 +6,11 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 13:01:26 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 15:00:49 by ckasyc           ###   ########.fr       */
+/*   Updated: 2020/12/28 15:48:38 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftlib.h"
+#include "libft.h"
 
 int		ft_isalpha(int c)
 {

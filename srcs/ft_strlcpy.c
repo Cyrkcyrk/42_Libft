@@ -6,11 +6,11 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/06 12:45:07 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/27 19:54:48 by ckasyc           ###   ########.fr       */
+/*   Updated: 2020/12/28 15:50:27 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftlib.h"
+#include "libft.h"
 
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {

@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stdlib.h                                           :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 21:51:03 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 14:59:14 by ckasyc           ###   ########.fr       */
+/*   Updated: 2020/12/28 21:08:30 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef S_BUFF_H
-# define S_BUFF_H
+#ifndef S_LIBFT_H
+# define S_LIBFT_H
+
+#include <stdlib.h>
 /*
 ** Memory
 */
 void			*ft_memcpy (void *dest, const void *src, size_t n);
 void			ft_bzero (void *s, size_t n);
+void			*ft_memset (void *s, int c, size_t n);
 void			*ft_memcpy (void *dest, const void *src, size_t n);
 void			*ft_memmove (void *dest, const void *src, size_t n);
 void			*ft_memchr (const void *s, int c, size_t n);

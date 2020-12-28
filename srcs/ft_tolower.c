@@ -6,11 +6,11 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 13:55:18 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 15:04:23 by ckasyc           ###   ########.fr       */
+/*   Updated: 2020/12/28 15:51:16 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftlib.h"
+#include "libft.h"
 
 int		ft_tolower(int c)
 {

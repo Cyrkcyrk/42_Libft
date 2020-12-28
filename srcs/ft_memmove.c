@@ -6,11 +6,11 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/25 16:11:29 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 15:02:22 by ckasyc           ###   ########.fr       */
+/*   Updated: 2020/12/28 16:49:55 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ftlib.h>
+#include "libft.h"
 
 void *cpy_from_start(void *dest, const void *src, size_t n)
 {
@@ -18,14 +18,17 @@ void *cpy_from_start(void *dest, const void *src, size_t n)
 
 	i = -1;
 	while (++i < n)
-		((unsigned char)dest)[i] = ((unsigned char)src)[i];
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 	return (dest);
 }
 
 void *cpy_from_end(void *dest, const void *src, size_t n)
 {
-	while (--n > 0)
-		((unsigned char)dest)[i] = ((unsigned char)src)[i];
+	unsigned int i;
+
+	i = -1;
+	while (++i > n)
+		((unsigned char *)dest)[n - i - 1] = ((unsigned char *)src)[n - i - 1];
 	return (dest);
 }
 

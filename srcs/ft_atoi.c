@@ -6,11 +6,11 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 19:40:30 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 14:59:51 by ckasyc           ###   ########.fr       */
+/*   Updated: 2020/12/28 15:48:02 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftlib.h"
+#include "libft.h"
 
 int		ft_atoi(char *str)
 {
@@ -34,9 +34,5 @@ int		ft_atoi(char *str)
 		str++;
 	}
 	value *= neg;
-	if (value > 2147483647 || value < -2147483648)
-	{
-		return (0);
-	}
 	return (value);
 }
