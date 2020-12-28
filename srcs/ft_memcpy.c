@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clbrunet <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/23 17:03:28 by clbrunet          #+#    #+#             */
-/*   Updated: 2020/12/28 15:03:37 by ckasyc           ###   ########.fr       */
+/*   Created: 2020/10/24 11:11:31 by ckasyc            #+#    #+#             */
+/*   Updated: 2020/12/28 15:02:14 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftlib.h"
+#include <ftlib.h>
 
-int			ft_strlen(char *str)
+void *ft_memcpy (void *dest, const void *src, size_t n)
 {
-	int		i;
+	unsigned int i;
 
-	i = 0;
-	while (*str)
-	{
-		i++;
-		str++;
-	}
-	return (i);
+	i = -1;
+	while (++i < n)
+		((int*)dest)[i] = ((int*)src)[i];
+	return (dest);
 }

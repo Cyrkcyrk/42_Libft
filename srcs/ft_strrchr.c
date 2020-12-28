@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clbrunet <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/23 17:03:28 by clbrunet          #+#    #+#             */
-/*   Updated: 2020/12/28 15:03:37 by ckasyc           ###   ########.fr       */
+/*   Created: 2020/12/27 20:09:15 by ckasyc            #+#    #+#             */
+/*   Updated: 2020/12/28 15:04:13 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ftlib.h"
 
-int			ft_strlen(char *str)
+char *ft_strrchr(const char *s, int c)
 {
-	int		i;
-
-	i = 0;
-	while (*str)
-	{
-		i++;
-		str++;
-	}
-	return (i);
+	char *pos, *ret;
+	
+	ret = 0;
+	pos = s-1;
+	while(*(++pos) != '\0')
+		if(*pos == c)
+			ret = pos;
+	return (ret);
 }

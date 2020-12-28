@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/06 21:05:32 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 15:03:47 by ckasyc           ###   ########.fr       */
+/*   Created: 2020/08/07 10:49:53 by ckasyc            #+#    #+#             */
+/*   Updated: 2020/12/28 15:03:57 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ftlib.h"
 
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
+char	*ft_strnstr(char *str, char *to_find, size_t len)
 {
-	unsigned int i;
+	int i;
+	int j;
 
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1 && s2 && s1[i] != '\0' && s2[i] != '\0'
-		&& s1[i] == s2[i] && i < n - 1)
+	if (to_find && to_find[0] == '\0')
+		return (str);
+	while (str && str[i] != '\0')
+	{
+		j = 0;
+		while (str[i + j] == to_find[j] && j < len && to_find[j] != '\0')
+			j++;
+		if (to_find && (to_find[j] == '\0' || j == len))
+			return (str + i);
 		i++;
-	return (s1[i] - s2[i]);
+	}
+	return (0);
 }

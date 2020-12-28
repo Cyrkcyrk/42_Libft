@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/06 21:05:32 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 15:03:47 by ckasyc           ###   ########.fr       */
+/*   Created: 2020/08/05 14:08:20 by ckasyc            #+#    #+#             */
+/*   Updated: 2020/08/09 14:55:05 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftlib.h"
+#include <unistd.h>
 
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
+void	ft_putchar(char c)
 {
-	unsigned int i;
+	write(1, &c, 1);
+}
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1 && s2 && s1[i] != '\0' && s2[i] != '\0'
-		&& s1[i] == s2[i] && i < n - 1)
-		i++;
-	return (s1[i] - s2[i]);
+void	ft_putnbr(int nb)
+{
+	long	buffer;
+	long	tmp;
+
+	tmp = (long)nb;
+	if (nb == -2147483648)
+		write(1, "-2147483648", 11);
+	else
+	{
+		if (tmp < 0)
+		{
+			tmp = -tmp;
+			ft_putchar('-');
+		}
+		buffer = tmp % 10;
+		if (tmp / 10 != 0)
+			ft_putnbr(tmp / 10);
+		ft_putchar(buffer + '0');
+	}
 }

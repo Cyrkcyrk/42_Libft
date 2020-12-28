@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clbrunet <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/23 17:03:28 by clbrunet          #+#    #+#             */
-/*   Updated: 2020/12/28 15:03:37 by ckasyc           ###   ########.fr       */
+/*   Created: 2020/08/06 12:45:07 by ckasyc            #+#    #+#             */
+/*   Updated: 2020/12/27 19:54:48 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ftlib.h"
 
-int			ft_strlen(char *str)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	int		i;
+	unsigned int i;
+	unsigned int len_src;
 
 	i = 0;
-	while (*str)
+	len_src = ft_strlen(src);
+	while (size > 0 && i < size - 1 && i < len_src)
 	{
+		dest[i] = src[i];
 		i++;
-		str++;
 	}
-	return (i);
+	dest[i] = '\0';
+	return (len_src);
 }

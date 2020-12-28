@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clbrunet <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/23 17:03:28 by clbrunet          #+#    #+#             */
-/*   Updated: 2020/12/28 15:03:37 by ckasyc           ###   ########.fr       */
+/*   Created: 2020/08/05 20:46:28 by ckasyc            #+#    #+#             */
+/*   Updated: 2020/12/28 12:43:03 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftlib.h"
-
-int			ft_strlen(char *str)
+int	ft_str_is_alpha(char *str)
 {
-	int		i;
+	int i;
 
-	i = 0;
-	while (*str)
+	i = -1;
+	while (str[++i] != '\0')
 	{
-		i++;
-		str++;
+		if (!((str[i] >= 'a' && str[i] <= 'z') ||
+			(str[i] >= 'A' && str[i] <= 'Z')))
+			return (0);
 	}
-	return (i);
+	return (1);
 }

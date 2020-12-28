@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/06 21:05:32 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 15:03:47 by ckasyc           ###   ########.fr       */
+/*   Created: 2020/08/07 12:32:14 by ckasyc            #+#    #+#             */
+/*   Updated: 2020/12/28 15:03:18 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ftlib.h"
 
-int		ft_strncmp(char *s1, char *s2, unsigned int n)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int i;
+	unsigned int len_src;
+	unsigned int len_dest;
 
+	len_src = ft_strlen(src);
+	len_dest = ft_strlen(dest);
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (s1 && s2 && s1[i] != '\0' && s2[i] != '\0'
-		&& s1[i] == s2[i] && i < n - 1)
+	if (len_dest >= size)
+		return (len_src + size);
+	while (src[i] != '\0' && len_dest + i < size - 1)
+	{
+		dest[len_dest + i] = src[i];
 		i++;
-	return (s1[i] - s2[i]);
+	}
+	dest[len_dest + i] = '\0';
+	return (len_src + len_dest);
 }
