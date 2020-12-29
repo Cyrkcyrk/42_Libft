@@ -6,11 +6,11 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/13 15:16:45 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/08/14 16:20:23 by ckasyc           ###   ########.fr       */
+/*   Updated: 2020/12/28 23:19:13 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <libft.h>
 
 int		ft_is_charset(char c, char *charset)
 {
