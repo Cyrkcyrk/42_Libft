@@ -6,7 +6,7 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 21:51:03 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 21:08:30 by ckasyc           ###   ########.fr       */
+/*   Updated: 2020/12/29 19:48:02 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,21 @@ int				ft_isascii(int c);
 int				ft_isprint(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
+/*
+**
+*/
+char			*ft_substr(char const *s, unsigned int start, size_t len);
+char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strtrim(char const *s1, char const *set);
+char			*ft_itoa(int nb);
+char    		**ft_split(char const *s, char c);
 
+void			ft_putchar_fd(char c, int fd);
+void			ft_putendl(char *s);
+void			ft_putendl_fd(int fd);
+void			ft_putnbr_fd(int n, int fd);
+void			ft_putstr_fd(char *s, int fd);
+//char			*ft_strmapi(char *s, void (*f)(unsigned int,char));
+char			*ft_strmapi(char *s, char (*f)(unsigned int,char));
 
 #endif

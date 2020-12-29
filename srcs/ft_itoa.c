@@ -6,33 +6,61 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 14:08:20 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/08/09 14:55:05 by ckasyc           ###   ########.fr       */
+/*   Updated: 2020/12/29 17:00:36 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
+
+void	putnbr(int nb, char *str, int pos)
+{
+	if ((int)(nb / 10) != 0)
+		putnbr((int)(nb / 10), str, pos - 1);
+	str[pos] = nb % 10 + '0';
+}
+
+int		getlen(int nb)
+{
+	int len;
+
+	len = 1;
+	if (nb == -2147483648)
+	{
+		len++;
+		nb = -214748364;
+	}
+	if (nb < 0)
+	{
+		nb = -nb;
+		len++;
+	}
+	while ( nb / 10 > 0)
+	{
+		nb = (nb / 10);
+		len++;
+	}
+	return (len);
+}
 
 char	*ft_itoa(int nb)
 {
 	char	*ret;
 	int		len;
-	int		pos;
-	long	buffer;
-	long	tmp;
 
-	tmp = (long)nb;
-	len = 0;
-	while ((tmp = tmp / 10) > 0)
-		len++;
-
-	}
-	if (tmp < 0)
+	len = getlen(nb);
+	if (!(ret = malloc((len + 1)*sizeof(char))))
+		return (NULL);
+	ret[len] = '\0';
+	if (nb == -2147483648)
 	{
-		tmp = -tmp;
-		ft_putchar('-');
+		ret[--len] = '8';
+		nb = -214748364;
 	}
-	buffer = tmp % 10;
-	if (tmp / 10 != 0)
-		ft_putnbr(tmp / 10);
-	ft_putchar(buffer + '0');
+	if (nb < 0)
+	{
+		nb = - nb;
+		ret[0] = '-';
+	}
+	putnbr(nb, ret, len - 1);
+	return (ret);
 }

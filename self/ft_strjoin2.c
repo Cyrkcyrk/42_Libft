@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin2.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/12 15:52:31 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 21:10:20 by ckasyc           ###   ########.fr       */
+/*   Updated: 2020/12/29 17:03:46 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_fill_str(int size, char **strs, char *sep, int len)
 	return (ret);
 }
 
-char	*ft_strjoin(int size, char **strs, char *sep)
+char	*ft_strjoin2(int size, char **strs, char *sep)
 {
 	int		i;
 	int		len;

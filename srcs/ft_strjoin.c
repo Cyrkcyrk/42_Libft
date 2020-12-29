@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/12/28 22:18:47 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 22:43:54 by ckasyc           ###   ########.fr       */
+/*   Created: 2020/12/28 22:12:29 by ckasyc            #+#    #+#             */
+/*   Updated: 2020/12/29 17:45:45 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*ret, start;
-	int		i, pos, len;
+	unsigned int 	len;
+	int				i;
+	int				j;
+	char			*ret;
 
-	if (!s1 || !set )//|| !(ret = malloc((ft_strlen(s1) + 1) * sizeof(char))))
+	if (!s1 || !s2)
+		return (NULL);
+	len = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1;
+	if (!(ret = malloc(len * sizeof(char))))
 		return (NULL);
 	i = -1;
-	while (ft_strchr(set, s1[i]) && s1[i] != '\0')
-		i++;
-	if (s1[i] == '\0')
-		return (NULL);
-	start = &(s1[i]);
-	i = -1;
-	while (start[++i] != '\0')
-		if (!ft_strchr(set, start[i]))
-			len = i + 1;
-	if (!(ret = malloc(len + 1) * sizeof(char)))
-		return (NULL);
-	i = -1;
-	while (++i <= len)
-		ret[i] = start[i];
-	ret[i] = '\0'
+	while (s1[++i] != '\0')
+		ret[i] = s1[i];
+	j = -1;
+	while (s2[++j] != '\0')
+		ret[j + i] = s2[j];
+	ret[len - 1] = '\0';
 	return (ret);
 }
