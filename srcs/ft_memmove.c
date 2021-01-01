@@ -6,7 +6,7 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/25 16:11:29 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 16:49:55 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/01 20:17:09 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void *cpy_from_end(void *dest, const void *src, size_t n)
 	unsigned int i;
 
 	i = -1;
-	while (++i > n)
+	while (++i < n)
 		((unsigned char *)dest)[n - i - 1] = ((unsigned char *)src)[n - i - 1];
 	return (dest);
 }
