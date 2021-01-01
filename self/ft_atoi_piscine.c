@@ -6,7 +6,7 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 19:40:30 by ckasyc            #+#    #+#             */
-/*   Updated: 2021/01/01 19:19:05 by ckasyc           ###   ########.fr       */
+/*   Updated: 2020/12/28 15:48:02 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_atoi(char *str)
 	while (*str && (*str == '\t' || *str == '\n' || *str == '\v'
 			|| *str == '\f' || *str == '\r' || *str == ' '))
 		str++;
-	if (*str && (*str == '+' || *str == '-'))
+	while (*str && (*str == '+' || *str == '-'))
 	{
 		if (*str == '-')
 			neg = -neg;
