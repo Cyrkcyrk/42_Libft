@@ -6,7 +6,7 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 21:51:03 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/29 19:48:02 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/01 14:49:45 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void			*ft_calloc(size_t nmemb, size_t size);
 /*
 ** Strings
 */
+int				ft_atoi(char *str);
 int				ft_strlen(char *str);
 unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
