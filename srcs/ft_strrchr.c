@@ -6,7 +6,7 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/27 20:09:15 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 16:56:54 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/04 23:21:45 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,7 @@ char *ft_strrchr(const char *s, int c)
 	while(s[++i] != '\0')
 		if(s[i] == (char)c)
 			ret = (char *)(s + i);
+	if (c == '\0')
+		return ((char *)(s + i));
 	return (ret);
 }
