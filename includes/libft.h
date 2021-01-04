@@ -6,7 +6,7 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 21:51:03 by ckasyc            #+#    #+#             */
-/*   Updated: 2021/01/05 00:01:28 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/05 00:36:19 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ char    		**ft_split(char const *s, char c);
 
 void			ft_putchar_fd(char c, int fd);
 void			ft_putendl(char *s);
-void			ft_putendl_fd(int fd);
+void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *s, int fd);
 //char			*ft_strmapi(char *s, void (*f)(unsigned int,char));

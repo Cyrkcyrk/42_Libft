@@ -6,14 +6,15 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/29 18:42:42 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/29 19:47:41 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/05 00:35:58 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-void	ft_putendl_fd(int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
+	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }
