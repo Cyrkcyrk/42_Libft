@@ -26,6 +26,7 @@ SRCS	=	${SRCFOLD}ft_atoi.c			\
 			${SRCFOLD}ft_strrchr.c		\
 			${SRCFOLD}ft_strnstr.c		\
 			${SRCFOLD}ft_memcpy.c		\
+			${SRCFOLD}ft_memccpy.c		\
 			${SRCFOLD}ft_substr.c		\
 			${SRCFOLD}ft_strtrim.c		\
 			${SRCFOLD}ft_itoa.c		    \

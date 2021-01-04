@@ -6,7 +6,7 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 21:51:03 by ckasyc            #+#    #+#             */
-/*   Updated: 2021/01/04 18:54:36 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/05 00:01:28 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void			*ft_memcpy (void *dest, const void *src, size_t n);
 void			ft_bzero (void *s, size_t n);
 void			*ft_memset (void *s, int c, size_t n);
 void			*ft_memcpy (void *dest, const void *src, size_t n);
+void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void			*ft_memmove (void *dest, const void *src, size_t n);
 void			*ft_memchr (const void *s, int c, size_t n);
 int				ft_memcmp(void *s1, void *s2, size_t n);
