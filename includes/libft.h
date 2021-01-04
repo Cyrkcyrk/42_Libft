@@ -6,7 +6,7 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 21:51:03 by ckasyc            #+#    #+#             */
-/*   Updated: 2021/01/01 14:49:45 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/04 18:54:36 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
-char			*ft_strnstr(char *str, char *to_find, size_t len);
+char			*ft_strnstr(const char *str, const char *to_find, size_t len);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
 char			*ft_strdup(char *str);
 /*
