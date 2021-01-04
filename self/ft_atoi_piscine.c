@@ -6,11 +6,11 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/09 19:40:30 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 15:48:02 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/05 00:10:24 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//#include "libft.h"
 
 int		ft_atoi(char *str)
 {
