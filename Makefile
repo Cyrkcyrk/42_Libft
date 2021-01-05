@@ -36,8 +36,16 @@ SRCS	=	${SRCFOLD}part1/ft_atoi.c			\
 			${SRCFOLD}part2/ft_strjoin.c		\
 			${SRCFOLD}part2/ft_strmapi.c		\
 			${SRCFOLD}part2/ft_strtrim.c		\
-			${SRCFOLD}part2/ft_substr.c
-
+			${SRCFOLD}part2/ft_substr.c			\
+			${SRCFOLD}bonus/ft_lstadd_back.c	\
+			${SRCFOLD}bonus/ft_lstadd_front.c	\
+			${SRCFOLD}bonus/ft_lstclear.c		\
+			${SRCFOLD}bonus/ft_lstdelone.c		\
+			${SRCFOLD}bonus/ft_lstiter.c		\
+			${SRCFOLD}bonus/ft_lstlast.c		\
+			${SRCFOLD}bonus/ft_lstmap.c			\
+			${SRCFOLD}bonus/ft_lstnew.c			\
+			${SRCFOLD}bonus/ft_lstsize.c			
 
 HEADER	=	${HEADFOLD}ftlib.h
 
