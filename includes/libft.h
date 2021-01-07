@@ -6,14 +6,14 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 21:51:03 by ckasyc            #+#    #+#             */
-/*   Updated: 2021/01/05 02:04:47 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/07 13:46:37 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef S_LIBFT_H
 # define S_LIBFT_H
 
-#include <stdlib.h>
+# include <stdlib.h>
 
 /*
 ** Lists
@@ -31,8 +31,8 @@ void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstlast(t_list *lst);
 t_list			*ft_lstnew(void *content);
 int				ft_lstsize(t_list *lst);
-t_list 			*ft_lstmap(t_list *lst, void *(*f)(void *),
-						   void (*del)(void *));
+t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
+				void (*del)(void *));
 /*
 ** Memory
 */
@@ -68,20 +68,21 @@ int				ft_isprint(int c);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
 /*
-**
+** Part 2
 */
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_itoa(int nb);
-char    		**ft_split(char const *s, char c);
-
+char			**ft_split(char const *s, char c);
+/*
+** Bonus
+*/
 void			ft_putchar_fd(char c, int fd);
 void			ft_putendl(char *s);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *s, int fd);
-//char			*ft_strmapi(char *s, void (*f)(unsigned int,char));
-char			*ft_strmapi(char *s, char (*f)(unsigned int,char));
+char			*ft_strmapi(char *s, char (*f)(unsigned int, char));
 
 #endif
