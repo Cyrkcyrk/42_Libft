@@ -6,13 +6,13 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 01:19:23 by ckasyc            #+#    #+#             */
-/*   Updated: 2021/01/05 01:20:56 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/07 19:30:22 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **alst, t_list *new)
+void	ft_lstadd_front(t_list **alst, t_list *new)
 {
 	new->next = *alst;
 	*alst = new;

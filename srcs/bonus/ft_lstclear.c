@@ -6,13 +6,13 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 01:33:56 by ckasyc            #+#    #+#             */
-/*   Updated: 2021/01/05 01:44:07 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/07 19:30:49 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list *prev;
 	t_list *maillon;

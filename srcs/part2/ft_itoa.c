@@ -6,7 +6,7 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/05 14:08:20 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/29 17:00:36 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/07 19:21:49 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		getlen(int nb)
 		nb = -nb;
 		len++;
 	}
-	while ( nb / 10 > 0)
+	while (nb / 10 > 0)
 	{
 		nb = (nb / 10);
 		len++;
@@ -48,7 +48,7 @@ char	*ft_itoa(int nb)
 	int		len;
 
 	len = getlen(nb);
-	if (!(ret = malloc((len + 1)*sizeof(char))))
+	if (!(ret = malloc((len + 1) * sizeof(char))))
 		return (NULL);
 	ret[len] = '\0';
 	if (nb == -2147483648)
@@ -58,7 +58,7 @@ char	*ft_itoa(int nb)
 	}
 	if (nb < 0)
 	{
-		nb = - nb;
+		nb = -nb;
 		ret[0] = '-';
 	}
 	putnbr(nb, ret, len - 1);

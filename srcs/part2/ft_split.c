@@ -6,7 +6,7 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/13 15:16:45 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/29 18:52:43 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/07 19:23:05 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int		ft_count_word(char *s, char c)
 	count = 0;
 	i = 0;
 	while (s[++i])
-		if (s[i] == c && s[i - 1] !=c )
+		if (s[i] == c && s[i - 1] != c)
 			count++;
 	if (s[i - 1] != c)
 		count++;

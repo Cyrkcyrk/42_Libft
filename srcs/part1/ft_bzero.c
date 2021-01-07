@@ -6,13 +6,13 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/24 11:02:39 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 15:48:14 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/07 19:14:14 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero (void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	unsigned int i;
 

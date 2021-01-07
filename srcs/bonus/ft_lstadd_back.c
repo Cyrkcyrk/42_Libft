@@ -6,13 +6,13 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 01:25:02 by ckasyc            #+#    #+#             */
-/*   Updated: 2021/01/05 01:27:05 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/07 19:30:04 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_back(t_list **alst, t_list *new)
+void	ft_lstadd_back(t_list **alst, t_list *new)
 {
 	t_list *maillon;
 

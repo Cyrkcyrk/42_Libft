@@ -6,13 +6,13 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 01:21:40 by ckasyc            #+#    #+#             */
-/*   Updated: 2021/01/05 01:22:31 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/07 19:30:40 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	int i;
 

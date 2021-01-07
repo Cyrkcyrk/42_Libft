@@ -6,7 +6,7 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/28 22:12:29 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/29 17:45:45 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/01/07 19:22:28 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	unsigned int 	len;
+	unsigned int	len;
 	int				i;
 	int				j;
 	char			*ret;
