@@ -99,18 +99,18 @@ CFLAGS	=	-Wall -Werror -Wextra
 .c.o:
 			${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I ${HEADFOLD}
 
-${NAME}:	${OBJS}
-			ar rc ${NAME} ${OBJS}
+$(NAME):	${OBJS}
+			ar rc $(NAME) ${OBJS}
 
-all:		${NAME}
+all:		$(NAME)
 
 clean:
 			${RM} ${OBJSBON}
 
 fclean:		clean
-			${RM} ${NAME}
+			${RM} $(NAME)
 
 bonus:		${OBJSBON}
-			ar rc ${NAME} ${OBJSBON}
+			ar rc $(NAME) ${OBJSBON}
 
 re:			fclean all
