@@ -6,7 +6,7 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/26 21:51:03 by ckasyc            #+#    #+#             */
-/*   Updated: 2021/01/07 13:46:37 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/02/12 15:26:25 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,20 +43,20 @@ void			*ft_memcpy (void *dest, const void *src, size_t n);
 void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void			*ft_memmove (void *dest, const void *src, size_t n);
 void			*ft_memchr (const void *s, int c, size_t n);
-int				ft_memcmp(void *s1, void *s2, size_t n);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_calloc(size_t nmemb, size_t size);
 /*
 ** Strings
 */
-int				ft_atoi(char *str);
-int				ft_strlen(char *str);
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size);
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
+int				ft_atoi(const char *str);
+int				ft_strlen(const char *str);
+unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int size);
+unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strnstr(const char *str, const char *to_find, size_t len);
-int				ft_strncmp(char *s1, char *s2, unsigned int n);
-char			*ft_strdup(char *str);
+int				ft_strncmp(const char *s1, const char *s2, unsigned int n);
+char			*ft_strdup(const char *str);
 /*
 ** characters control
 */
@@ -83,6 +83,6 @@ void			ft_putendl(char *s);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *s, int fd);
-char			*ft_strmapi(char *s, char (*f)(unsigned int, char));
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 #endif

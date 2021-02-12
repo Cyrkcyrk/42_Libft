@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/06 21:10:31 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 21:11:25 by ckasyc           ###   ########.fr       */
+/*   Created: 2020/08/11 21:32:47 by ckasyc            #+#    #+#             */
+/*   Updated: 2021/02/12 15:19:57 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-char	*ft_strcat(char *dest, char *src)
+char	*ft_strdup(const char *str)
 {
-	int i;
-	int len_dest;
+	char	*ret;
+	int		len;
+	int		i;
 
-	i = 0;
-	len_dest = ft_strlen(dest);
-	while (src && src[i] != '\0')
-	{
-		dest[len_dest + i] = src[i];
-		i++;
-	}
-	dest[len_dest + i] = '\0';
-	return (dest);
+	len = 0;
+	i = -1;
+	while (str[len])
+		len++;
+	ret = malloc((len + 1) * sizeof(char));
+	while (str[++i])
+		ret[i] = str[i];
+	ret[len] = '\0';
+	return (ret);
 }

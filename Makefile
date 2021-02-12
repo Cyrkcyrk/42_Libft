@@ -1,88 +1,86 @@
 
-SRCFOLD	= 	./srcs/
+SRCFOLD	= 	./
 
-HEADFOLD= 	./includes/
+HEADFOLD= 	./
 
-SRCS	=	${SRCFOLD}part1/ft_atoi.c			\
-			${SRCFOLD}part1/ft_bzero.c			\
-			${SRCFOLD}part1/ft_calloc.c			\
-			${SRCFOLD}part1/ft_isalnum.c		\
-			${SRCFOLD}part1/ft_isalpha.c		\
-			${SRCFOLD}part1/ft_isascii.c		\
-			${SRCFOLD}part1/ft_isdigit.c		\
-			${SRCFOLD}part1/ft_isprint.c		\
-			${SRCFOLD}part1/ft_memccpy.c		\
-			${SRCFOLD}part1/ft_memchr.c			\
-			${SRCFOLD}part1/ft_memcmp.c			\
-			${SRCFOLD}part1/ft_memcpy.c			\
-			${SRCFOLD}part1/ft_memmove.c		\
-			${SRCFOLD}part1/ft_memset.c			\
-			${SRCFOLD}part1/ft_strchr.c			\
-			${SRCFOLD}part1/ft_strdup.c			\
-			${SRCFOLD}part1/ft_strlcat.c		\
-			${SRCFOLD}part1/ft_strlcpy.c		\
-			${SRCFOLD}part1/ft_strlen.c			\
-			${SRCFOLD}part1/ft_strncmp.c		\
-			${SRCFOLD}part1/ft_strnstr.c		\
-			${SRCFOLD}part1/ft_strrchr.c		\
-			${SRCFOLD}part1/ft_tolower.c		\
-			${SRCFOLD}part1/ft_toupper.c		\
-			${SRCFOLD}part2/ft_itoa.c			\
-			${SRCFOLD}part2/ft_putchar_fd.c		\
-			${SRCFOLD}part2/ft_putendl_fd.c		\
-			${SRCFOLD}part2/ft_putnbr_fd.c		\
-			${SRCFOLD}part2/ft_putstr_fd.c		\
-			${SRCFOLD}part2/ft_split.c			\
-			${SRCFOLD}part2/ft_strjoin.c		\
-			${SRCFOLD}part2/ft_strmapi.c		\
-			${SRCFOLD}part2/ft_strtrim.c		\
-			${SRCFOLD}part2/ft_substr.c			\
+SRCS	=	${SRCFOLD}ft_atoi.c			\
+			${SRCFOLD}ft_bzero.c			\
+			${SRCFOLD}ft_calloc.c			\
+			${SRCFOLD}ft_isalnum.c		\
+			${SRCFOLD}ft_isalpha.c		\
+			${SRCFOLD}ft_isascii.c		\
+			${SRCFOLD}ft_isdigit.c		\
+			${SRCFOLD}ft_isprint.c		\
+			${SRCFOLD}ft_memccpy.c		\
+			${SRCFOLD}ft_memchr.c			\
+			${SRCFOLD}ft_memcmp.c			\
+			${SRCFOLD}ft_memcpy.c			\
+			${SRCFOLD}ft_memmove.c		\
+			${SRCFOLD}ft_memset.c			\
+			${SRCFOLD}ft_strchr.c			\
+			${SRCFOLD}ft_strdup.c			\
+			${SRCFOLD}ft_strlcat.c		\
+			${SRCFOLD}ft_strlcpy.c		\
+			${SRCFOLD}ft_strlen.c			\
+			${SRCFOLD}ft_strncmp.c		\
+			${SRCFOLD}ft_strnstr.c		\
+			${SRCFOLD}ft_strrchr.c		\
+			${SRCFOLD}ft_tolower.c		\
+			${SRCFOLD}ft_toupper.c		\
+			${SRCFOLD}ft_itoa.c			\
+			${SRCFOLD}ft_putchar_fd.c		\
+			${SRCFOLD}ft_putendl_fd.c		\
+			${SRCFOLD}ft_putnbr_fd.c		\
+			${SRCFOLD}ft_putstr_fd.c		\
+			${SRCFOLD}ft_split.c			\
+			${SRCFOLD}ft_strjoin.c		\
+			${SRCFOLD}ft_strmapi.c		\
+			${SRCFOLD}ft_strtrim.c		\
+			${SRCFOLD}ft_substr.c			\
 			
-SRCSBONUS =	${SRCFOLD}part1/ft_atoi.c			\
-			${SRCFOLD}part1/ft_bzero.c			\
-			${SRCFOLD}part1/ft_calloc.c			\
-			${SRCFOLD}part1/ft_isalnum.c		\
-			${SRCFOLD}part1/ft_isalpha.c		\
-			${SRCFOLD}part1/ft_isascii.c		\
-			${SRCFOLD}part1/ft_isdigit.c		\
-			${SRCFOLD}part1/ft_isprint.c		\
-			${SRCFOLD}part1/ft_memccpy.c		\
-			${SRCFOLD}part1/ft_memchr.c			\
-			${SRCFOLD}part1/ft_memcmp.c			\
-			${SRCFOLD}part1/ft_memcpy.c			\
-			${SRCFOLD}part1/ft_memmove.c		\
-			${SRCFOLD}part1/ft_memset.c			\
-			${SRCFOLD}part1/ft_strchr.c			\
-			${SRCFOLD}part1/ft_strdup.c			\
-			${SRCFOLD}part1/ft_strlcat.c		\
-			${SRCFOLD}part1/ft_strlcpy.c		\
-			${SRCFOLD}part1/ft_strlen.c			\
-			${SRCFOLD}part1/ft_strncmp.c		\
-			${SRCFOLD}part1/ft_strnstr.c		\
-			${SRCFOLD}part1/ft_strrchr.c		\
-			${SRCFOLD}part1/ft_tolower.c		\
-			${SRCFOLD}part1/ft_toupper.c		\
-			${SRCFOLD}part2/ft_itoa.c			\
-			${SRCFOLD}part2/ft_putchar_fd.c		\
-			${SRCFOLD}part2/ft_putendl_fd.c		\
-			${SRCFOLD}part2/ft_putnbr_fd.c		\
-			${SRCFOLD}part2/ft_putstr_fd.c		\
-			${SRCFOLD}part2/ft_split.c			\
-			${SRCFOLD}part2/ft_strjoin.c		\
-			${SRCFOLD}part2/ft_strmapi.c		\
-			${SRCFOLD}part2/ft_strtrim.c		\
-			${SRCFOLD}part2/ft_substr.c			\
-			${SRCFOLD}bonus/ft_lstadd_back.c	\
-			${SRCFOLD}bonus/ft_lstadd_front.c	\
-			${SRCFOLD}bonus/ft_lstclear.c		\
-			${SRCFOLD}bonus/ft_lstdelone.c		\
-			${SRCFOLD}bonus/ft_lstiter.c		\
-			${SRCFOLD}bonus/ft_lstlast.c		\
-			${SRCFOLD}bonus/ft_lstmap.c			\
-			${SRCFOLD}bonus/ft_lstnew.c			\
-			${SRCFOLD}bonus/ft_lstsize.c			
-
-
+SRCSBONUS =	${SRCFOLD}ft_atoi.c			\
+			${SRCFOLD}ft_bzero.c			\
+			${SRCFOLD}ft_calloc.c			\
+			${SRCFOLD}ft_isalnum.c		\
+			${SRCFOLD}ft_isalpha.c		\
+			${SRCFOLD}ft_isascii.c		\
+			${SRCFOLD}ft_isdigit.c		\
+			${SRCFOLD}ft_isprint.c		\
+			${SRCFOLD}ft_memccpy.c		\
+			${SRCFOLD}ft_memchr.c			\
+			${SRCFOLD}ft_memcmp.c			\
+			${SRCFOLD}ft_memcpy.c			\
+			${SRCFOLD}ft_memmove.c		\
+			${SRCFOLD}ft_memset.c			\
+			${SRCFOLD}ft_strchr.c			\
+			${SRCFOLD}ft_strdup.c			\
+			${SRCFOLD}ft_strlcat.c		\
+			${SRCFOLD}ft_strlcpy.c		\
+			${SRCFOLD}ft_strlen.c			\
+			${SRCFOLD}ft_strncmp.c		\
+			${SRCFOLD}ft_strnstr.c		\
+			${SRCFOLD}ft_strrchr.c		\
+			${SRCFOLD}ft_tolower.c		\
+			${SRCFOLD}ft_toupper.c		\
+			${SRCFOLD}ft_itoa.c			\
+			${SRCFOLD}ft_putchar_fd.c		\
+			${SRCFOLD}ft_putendl_fd.c		\
+			${SRCFOLD}ft_putnbr_fd.c		\
+			${SRCFOLD}ft_putstr_fd.c		\
+			${SRCFOLD}ft_split.c			\
+			${SRCFOLD}ft_strjoin.c		\
+			${SRCFOLD}ft_strmapi.c		\
+			${SRCFOLD}ft_strtrim.c		\
+			${SRCFOLD}ft_substr.c			\
+			${SRCFOLD}ft_lstadd_back.c	\
+			${SRCFOLD}ft_lstadd_front.c	\
+			${SRCFOLD}ft_lstclear.c		\
+			${SRCFOLD}ft_lstdelone.c		\
+			${SRCFOLD}ft_lstiter.c		\
+			${SRCFOLD}ft_lstlast.c		\
+			${SRCFOLD}ft_lstmap.c			\
+			${SRCFOLD}ft_lstnew.c			\
+			${SRCFOLD}ft_lstsize.c			
 
 HEADER	=	${HEADFOLD}ftlib.h
 

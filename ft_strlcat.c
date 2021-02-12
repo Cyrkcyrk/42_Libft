@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/11 21:32:47 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 15:50:08 by ckasyc           ###   ########.fr       */
+/*   Created: 2020/08/07 12:32:14 by ckasyc            #+#    #+#             */
+/*   Updated: 2021/02/12 15:18:35 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *str)
+unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 {
-	char	*ret;
-	int		len;
-	int		i;
+	unsigned int i;
+	unsigned int len_src;
+	unsigned int len_dest;
 
-	len = 0;
-	i = -1;
-	while (str[len])
-		len++;
-	ret = malloc((len + 1) * sizeof(char));
-	while (str[++i])
-		ret[i] = str[i];
-	ret[len] = '\0';
-	return (ret);
+	len_src = ft_strlen(src);
+	len_dest = ft_strlen(dest);
+	i = 0;
+	if (len_dest >= size)
+		return (len_src + size);
+	while (src[i] != '\0' && len_dest + i < size - 1)
+	{
+		dest[len_dest + i] = src[i];
+		i++;
+	}
+	dest[len_dest + i] = '\0';
+	return (len_src + len_dest);
 }

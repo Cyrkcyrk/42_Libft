@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/28 08:15:23 by ckasyc            #+#    #+#             */
-/*   Updated: 2021/01/07 19:16:32 by ckasyc           ###   ########.fr       */
+/*   Created: 2020/08/07 10:49:53 by ckasyc            #+#    #+#             */
+/*   Updated: 2021/02/12 15:19:25 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strnstr(const char *str, const char *to_find, size_t size)
 {
 	unsigned int	i;
-	unsigned char	*s2;
+	unsigned int	j;
 
-	s2 = (unsigned char *)s;
 	i = 0;
-	while (++i < n && *s2 != (unsigned char)c)
-		s2++;
-	if (*s2 == (unsigned char)c && i < n)
-		return ((void *)s2);
-	return (NULL);
+	if (to_find && to_find[0] == '\0')
+		return ((char *)str);
+	while (str && str[i] != '\0' && i < size)
+	{
+		j = 0;
+		while (str[i + j] == to_find[j] && i + j < size)
+			j++;
+		if (to_find && to_find[j] == '\0')
+			return ((char *)(str + i));
+		i++;
+	}
+	return (0);
 }

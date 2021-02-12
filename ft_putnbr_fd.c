@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/05 19:47:52 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 21:09:56 by ckasyc           ###   ########.fr       */
+/*   Created: 2020/12/29 18:43:38 by ckasyc            #+#    #+#             */
+/*   Updated: 2021/02/12 16:10:04 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
+#include <unistd.h>
 
-char	*ft_strcpy(char *dest, char *src)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int i;
-	int len;
+	char *str;
 
-	i = 0;
-	len = ft_strlen(src);
-	while (i < len + 1)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	return (dest);
+	if (!(str = ft_itoa(n)))
+		return ;
+	ft_putstr_fd(str, fd);
+	free(str);
 }

@@ -1,40 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/05 14:08:20 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/08/09 14:55:05 by ckasyc           ###   ########.fr       */
+/*   Created: 2020/10/24 11:02:39 by ckasyc            #+#    #+#             */
+/*   Updated: 2021/02/12 15:35:29 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar(char c)
+void	ft_bzero(void *s, size_t n)
 {
-	write(1, &c, 1);
-}
+	unsigned int i;
 
-void	ft_putnbr(int nb)
-{
-	long	buffer;
-	long	tmp;
-
-	tmp = (long)nb;
-	if (nb == -2147483648)
-		write(1, "-2147483648", 11);
-	else
-	{
-		if (tmp < 0)
-		{
-			tmp = -tmp;
-			ft_putchar('-');
-		}
-		buffer = tmp % 10;
-		if (tmp / 10 != 0)
-			ft_putnbr(tmp / 10);
-		ft_putchar(buffer + '0');
-	}
+	i = -1;
+	while (++i < n)
+		((unsigned char*)s)[i] = 0;
 }

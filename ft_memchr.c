@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/05 20:46:28 by ckasyc            #+#    #+#             */
-/*   Updated: 2020/12/28 12:43:03 by ckasyc           ###   ########.fr       */
+/*   Created: 2020/10/28 08:15:23 by ckasyc            #+#    #+#             */
+/*   Updated: 2021/02/12 15:46:35 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_alpha(char *str)
-{
-	int i;
+#include "libft.h"
 
-	i = -1;
-	while (str[++i] != '\0')
-	{
-		if (!((str[i] >= 'a' && str[i] <= 'z') ||
-			(str[i] >= 'A' && str[i] <= 'Z')))
-			return (0);
-	}
-	return (1);
+void	*ft_memchr(const void *s, int c, size_t n)
+{
+	unsigned int	i;
+	unsigned char	*s2;
+
+	if (n == 0)
+		return (NULL);
+	s2 = (unsigned char *)s;
+	i = 0;
+	while (i < n - 1 && s2[i] != (unsigned char)c)
+		i++;
+	if (s2[i] == (unsigned char)c)
+		return ((void *)&s2[i]);
+	return (NULL);
 }

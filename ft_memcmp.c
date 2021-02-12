@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/08/07 10:49:53 by ckasyc            #+#    #+#             */
-/*   Updated: 2021/01/04 23:16:46 by ckasyc           ###   ########.fr       */
+/*   Created: 2020/10/25 19:38:02 by ckasyc            #+#    #+#             */
+/*   Updated: 2021/02/12 15:08:30 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t size)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int	i;
-	unsigned int	j;
+	unsigned int i;
 
 	i = 0;
-	if (to_find && to_find[0] == '\0')
-		return ((char *)str);
-	while (str && str[i] != '\0' && i < size)
-	{
-		j = 0;
-		while (str[i + j] == to_find[j] && i + j < size)
-			j++;
-		if (to_find && to_find[j] == '\0')
-			return ((char *)(str + i));
+	if (n == 0)
+		return (0);
+	while (((unsigned char *)s1)[i] == ((unsigned char *)s2)[i] && i < n - 1)
 		i++;
-	}
-	return (0);
+	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }
