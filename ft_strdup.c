@@ -6,7 +6,7 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/11 21:32:47 by ckasyc            #+#    #+#             */
-/*   Updated: 2021/02/12 15:19:57 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/02/13 13:13:12 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strdup(const char *str)
 	while (str[len])
 		len++;
 	ret = malloc((len + 1) * sizeof(char));
+	if (!ret)
+		return (NULL);
 	while (str[++i])
 		ret[i] = str[i];
 	ret[len] = '\0';
