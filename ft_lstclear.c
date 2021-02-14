@@ -6,7 +6,7 @@
 /*   By: ckasyc <ckasyc@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/05 01:33:56 by ckasyc            #+#    #+#             */
-/*   Updated: 2021/01/07 19:30:49 by ckasyc           ###   ########.fr       */
+/*   Updated: 2021/02/14 14:24:16 by ckasyc           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	{
 		prev = maillon;
 		maillon = maillon->next;
-		(*del)(prev->content);
+		if (del)
+			(*del)(prev->content);
 		free(prev);
 	}
 	*lst = NULL;
